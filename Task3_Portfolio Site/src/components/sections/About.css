@@ -1,0 +1,241 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.about-text {
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.sub-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-main);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.heading-icon {
+  color: var(--accent-primary);
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+body.light-mode .about-text strong {
+  color: var(--accent-primary);
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.highlight-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background: rgba(0, 210, 255, 0.05);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 8px 8px 0;
+}
+
+.highlight-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.highlight-box h4 {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.highlight-box p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.about-card {
+  padding: 1.8rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.ai-skills-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .ai-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.about-card:hover {
+  transform: perspective(400px) translateZ(20px) translateY(-10px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 15px 40px rgba(0, 210, 255, 0.2);
+  border-radius: 20px;
+}
+
+.icon-wrapper {
+  background: rgba(0, 210, 255, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-primary);
+}
+
+.about-card h3 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.about-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: center;
+  /* divide-x: 1px solid var(--border-glass); */
+}
+
+.stat-item {
+  position: relative;
+  border-right: 1px solid var(--border-glass);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-grid, .stats-container {
+    grid-template-columns: 1fr;
+  }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-glass);
+    padding: 1.5rem 0;
+  }
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Extra Features: Progress Bars */
+.mt-5 {
+  margin-top: 3.5rem;
+}
+
+.about-progress-section {
+  padding: 3rem;
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.progress-bg {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-main);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  border-radius: 10px;
+}
+
+@media (max-width: 968px) {
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+}
+
+.honor-card {
+  display: flex;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+  align-items: flex-start;
+}
+
+.honor-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+}
+
+.honor-icon-wrapper {
+  background: rgba(0, 210, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.honor-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.honor-content {
+  flex: 1;
+}
+
+.honor-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.honor-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.honor-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .honors-grid {
+    grid-template-columns: 1fr;
+  }
+}
