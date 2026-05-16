@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for Next/Prev/Close buttons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Visual <span>HazratUllah</span></h1>
+        <p>A curated collection of moments</p>
+    </header>
+
+    <main class="gallery-container">
+        <!-- Filter Controls -->
+        <div class="filters" id="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature & Space</button>
+            <button class="filter-btn" data-filter="creative">Creative & Agency</button>
+            <button class="filter-btn" data-filter="technology">Technology</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery">
+            <!-- Nature & Space -->
+            <div class="gallery-item" data-category="nature">
+                <img src="assat/mountainparallax.jpg" alt="Mountain Parallax" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Mountain Parallax</h3>
+                    <span>Nature & Space</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="assat/space_opera.jpg" alt="Space Opera" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Space Opera</h3>
+                    <span>Nature & Space</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="assat/parallaxjoy.jpg" alt="Parallax Joy" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Parallax Joy</h3>
+                    <span>Nature & Space</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="assat/wonderstruck.jpg" alt="Wonderstruck" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Wonderstruck</h3>
+                    <span>Nature & Space</span>
+                </div>
+            </div>
+
+            <!-- Creative & Agency -->
+            <div class="gallery-item" data-category="creative">
+                <img src="assat/creative_frontpage.jpg" alt="Creative Frontpage" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Creative Frontpage</h3>
+                    <span>Creative & Agency</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="creative">
+                <img src="assat/agency_grid.jpg" alt="Agency Grid" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Agency Grid</h3>
+                    <span>Creative & Agency</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="creative">
+                <img src="assat/deskscene.jpg" alt="Desk Scene" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Desk Scene</h3>
+                    <span>Creative & Agency</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="creative">
+                <img src="assat/hero_image1.jpg" alt="Hero Image" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Hero Image</h3>
+                    <span>Creative & Agency</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="creative">
+                <img src="assat/minimal_website.jpg" alt="Minimal Website" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Minimal Website</h3>
+                    <span>Creative & Agency</span>
+                </div>
+            </div>
+
+            <!-- Technology -->
+            <div class="gallery-item" data-category="technology">
+                <img src="assat/tech_journal.jpg" alt="Tech Journal" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Tech Journal</h3>
+                    <span>Technology</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="technology">
+                <img src="assat/app_showcase.jpg" alt="App Showcase" loading="lazy">
+                <div class="item-overlay">
+                    <h3>App Showcase</h3>
+                    <span>Technology</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="technology">
+                <img src="assat/distortion.jpg" alt="Distortion Tech" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Distortion Tech</h3>
+                    <span>Technology</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="technology">
+                <img src="assat/dark_theme_blocks.jpg" alt="Dark Theme Blocks" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Dark Theme Blocks</h3>
+                    <span>Technology</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="technology">
+                <img src="assat/particle-effect-three.jpg" alt="Particle Effect" loading="lazy">
+                <div class="item-overlay">
+                    <h3>Particle Effect</h3>
+                    <span>Technology</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+            <i class="ph ph-x"></i>
+        </button>
+        
+        <div class="lightbox-content">
+            <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous image">
+                <i class="ph ph-caret-left"></i>
+            </button>
+            
+            <div class="lightbox-image-container">
+                <img src="" alt="" id="lightbox-img">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+                <div class="lightbox-actions">
+                    <a href="#" download id="lightbox-download" class="lightbox-btn" aria-label="Download image">
+                        <i class="ph ph-download-simple"></i> Download
+                    </a>
+                </div>
+            </div>
+            
+            <button class="lightbox-nav next" id="lightbox-next" aria-label="Next image">
+                <i class="ph ph-caret-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A premium glassmorphism calculator with keyboard support and smooth animations."
+    />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated background blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <main class="calculator-wrapper">
+      <div class="calculator" id="calculator" aria-label="Calculator">
+        <!-- Header -->
+        <div class="calc-header">
+          <span class="calc-title">Calculator</span>
+          <div class="calc-mode-indicator">
+            <span class="mode-dot"></span>
+            <span class="mode-text">STANDARD</span>
+          </div>
+        </div>
+
+        <!-- Display -->
+        <div class="display" id="display" role="region" aria-label="Calculator Display">
+          <div class="expression" id="expression" aria-live="polite"></div>
+          <div class="result" id="result" aria-live="assertive">0</div>
+          <div class="keyboard-hint" id="keyboard-hint">⌨ Keyboard Supported</div>
+        </div>
+
+        <!-- Button Grid -->
+        <div class="btn-grid" role="group" aria-label="Calculator Buttons">
+
+          <!-- Row 1 -->
+          <button class="btn btn-special btn-wide" id="btn-clear" aria-label="Clear All" data-key="Escape">AC</button>
+          <button class="btn btn-special" id="btn-sign" aria-label="Toggle Sign" data-key="">+/−</button>
+          <button class="btn btn-special" id="btn-percent" aria-label="Percent" data-key="%">%</button>
+          <button class="btn btn-operator" id="btn-divide" aria-label="Divide" data-key="/">÷</button>
+
+          <!-- Row 2 -->
+          <button class="btn btn-number" id="btn-7" aria-label="7" data-key="7">7</button>
+          <button class="btn btn-number" id="btn-8" aria-label="8" data-key="8">8</button>
+          <button class="btn btn-number" id="btn-9" aria-label="9" data-key="9">9</button>
+          <button class="btn btn-operator" id="btn-multiply" aria-label="Multiply" data-key="*">×</button>
+
+          <!-- Row 3 -->
+          <button class="btn btn-number" id="btn-4" aria-label="4" data-key="4">4</button>
+          <button class="btn btn-number" id="btn-5" aria-label="5" data-key="5">5</button>
+          <button class="btn btn-number" id="btn-6" aria-label="6" data-key="6">6</button>
+          <button class="btn btn-operator" id="btn-subtract" aria-label="Subtract" data-key="-">−</button>
+
+          <!-- Row 4 -->
+          <button class="btn btn-number" id="btn-1" aria-label="1" data-key="1">1</button>
+          <button class="btn btn-number" id="btn-2" aria-label="2" data-key="2">2</button>
+          <button class="btn btn-number" id="btn-3" aria-label="3" data-key="3">3</button>
+          <button class="btn btn-operator" id="btn-add" aria-label="Add" data-key="+">+</button>
+
+          <!-- Row 5 -->
+          <button class="btn btn-number btn-wide" id="btn-0" aria-label="0" data-key="0">0</button>
+          <button class="btn btn-number" id="btn-decimal" aria-label="Decimal" data-key=".">.</button>
+          <button class="btn btn-equals" id="btn-equals" aria-label="Equals" data-key="Enter">=</button>
+
+        </div>
+
+        <!-- Keyboard Shortcuts Panel -->
+        <div class="shortcuts-panel" id="shortcuts-panel">
+          <div class="shortcuts-title">⌨ Keyboard Shortcuts</div>
+          <div class="shortcuts-grid">
+            <span>0–9</span><span>Numbers</span>
+            <span>+ − * /</span><span>Operations</span>
+            <span>Enter / =</span><span>Calculate</span>
+            <span>Escape</span><span>Clear</span>
+            <span>Backspace</span><span>Delete</span>
+            <span>%</span><span>Percentage</span>
+          </div>
+        </div>
+
+        <button class="shortcuts-toggle" id="shortcuts-toggle" aria-label="Toggle keyboard shortcuts">
+          ⌨ Shortcuts
+        </button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
